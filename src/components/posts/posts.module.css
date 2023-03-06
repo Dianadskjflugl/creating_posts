@@ -1,0 +1,36 @@
+.block h1 {
+    font-size: 35px;
+  }
+
+  .block h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+.item {
+  margin-top: 30px;
+  display: grid;
+  grid-template-areas: 
+  "h n";
+  grid-template-columns: 6fr 6fr;
+} 
+  
+.filter {
+  text-align: center;
+  grid-area: h;
+}
+
+.post {
+  grid-area: n;
+  text-align: center;
+}
+
+@media (max-width: 481px) {
+  .item {
+    margin-top: 5px;
+    display: inline-block;
+  }
+  .block h1 {
+    font-size: 20px;
+  }
+} 
