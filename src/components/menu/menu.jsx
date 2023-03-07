@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import classes from './menu.module.css';
 import { AuthContext } from '../../context/index';
 import { useNavigate } from 'react-router-dom';
-import MyButtonNone from '../../UI/buttonNone/buttonNone';
 
 const Menu = () => {
 
