@@ -5,3 +5,16 @@
 .element {
     margin: 10px;
 }
+
+.input {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 660px) {
+    .input {
+        width: 70%;
+    }
+    
+}

@@ -1,6 +1,7 @@
 select {
-	padding: 3px 10px;
-	border: 1px solid #8B949D;
+	padding: 8px 15px;
+	border: 1px solid #1049A9;
 	margin: 5px;
 	text-align: left;
+	border-radius: 3px;
 }

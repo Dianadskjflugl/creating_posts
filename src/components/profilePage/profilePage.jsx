@@ -4,7 +4,8 @@ import classes from './profilePage.module.css';
 import {useFetching} from '../../hooks/useFetching';
 import PostService from '../../API/postServise';
 import Loader from '../../UI/loader/loader';
-import { Button } from '@material-ui/core';
+import MyButton from '../../UI/button/button';
+import MyButtonNone from '../../UI/buttonNone/buttonNone';
 
 
 const PostIdPage = () => {
@@ -31,7 +32,7 @@ const PostIdPage = () => {
 
     return (
         <div className={classes.block}>
-            <Button onClick={goBack}>Назад</Button>
+            <MyButtonNone onClick={goBack}>Назад</MyButtonNone>
             {isComLoading
                 ? <Loader/>
                 :   <><h1>{post.title}</h1>

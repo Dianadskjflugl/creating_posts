@@ -1,13 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import React from 'react';
-import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import classes from './postItem.module.css';
-
-
+import MyButtonNone from '../../../../UI/buttonNone/buttonNone';
 
 const PostItem = (props) => {
 
@@ -21,24 +15,22 @@ const PostItem = (props) => {
 
     return (
         <div className={classes.container}>
-            <Card>
+            <div>
                 <div className={classes.remove}>
-                    <Button size="small" color="secondary" onClick={removePost}>
-                        <div>close</div>
-                    </Button>
+                    <button className={classes.close} onClick={removePost}>&#215;</button>
                 </div>
-                <CardContent>
-                    <Typography variant="h5" component="h2">
+                <div>
+                    <h2>
                         {props.number}.{props.post.title}
-                    </Typography>
-                    <Typography>
+                    </h2>
+                    <p>
                         {props.post.body}
-                    </Typography>
-                </CardContent>
-                <CardActions>
-                    <Button size="small" onClick={goPost}>перейти</Button>
-                </CardActions>
-            </Card>
+                    </p>
+                </div>
+                <div>
+                    <MyButtonNone onClick={goPost}>перейти</MyButtonNone>
+                </div>
+            </div>
         </div>
     );
 }

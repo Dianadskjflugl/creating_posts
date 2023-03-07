@@ -2,7 +2,11 @@
     padding: 10px;
 }
 
+.inputs {
+    text-align: center;
+}
+
 .input {
     margin-bottom: 5px;
-    
+    width: 90%;
 }

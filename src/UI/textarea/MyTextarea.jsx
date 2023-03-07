@@ -1,11 +1,11 @@
-import React from 'react';
-import './MyTextarea.module.css';
+import React, { forwardRef } from 'react';
+import classes from './MyTextarea.module.css';
 
-const MyTextArea = () => {
+const MyTextArea = forwardRef((props, ref) => {
     return (
-        <textarea placeholder='Введите текст'></textarea>
+        <textarea className={classes.textarea} ref={ref} {...props}></textarea>
     );
-}
+})
 
 export default MyTextArea;
 

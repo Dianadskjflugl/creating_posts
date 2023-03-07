@@ -10,7 +10,7 @@ import { useFetching } from '../../hooks/useFetching';
 import { usePosts } from '../../hooks/usePosts';
 import PostList from './postList/postList';
 import { useObserver } from '../../hooks/useObserver';
-import { Button } from '@material-ui/core';
+import MyButton from '../../UI/button/button';
 
 const PostInfo = () => {
     const [posts, setPosts] = useState([])
@@ -54,7 +54,7 @@ const PostInfo = () => {
                 </div>
                 <div className={classes.post}>
                     <h3>Создать пост</h3>
-                    <Button onClick={() => { setModal(true) }} variant="outlined" color="primary">новый пост</Button>
+                    <MyButton onClick={() => { setModal(true) }}>новый пост</MyButton>
                 </div>
             </div>
             <MyModal visible={modal} setVisible={setModal}><PostForm create={createPost} /></MyModal>

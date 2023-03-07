@@ -2,7 +2,8 @@ import React, { useContext, useState } from 'react';
 import classes from './login.module.css';
 import { AuthContext } from '../../context/index';
 import { useNavigate } from 'react-router-dom';
-import { Button, TextField } from '@material-ui/core';
+import MyButton from '../../UI/button/button';
+import MyInput from '../../UI/input/input';
 
 
 const Login = () => {
@@ -31,25 +32,20 @@ const Login = () => {
                 <form onSubmit={AddLogin}>
                     <div className={classes.inputs}>
                     <div className={classes.input}>
-                        <TextField type="text"
+                        <MyInput 
+                            type="text"
                             onChange={e => setData({ ...data, login: e.target.value })}
-                            label="Введите логин"
-                            variant="outlined"
-                            fullWidth
-                            size='small'
+                            placeholder="Введите логин"
                             value={data.login} />
                     </div>
                     <div className={classes.input}>
-                        <TextField type="password"
+                        <MyInput type="password"
                             onChange={e => setData({ ...data, pasword: e.target.value })}
-                            label="Введите пароль"
-                            variant="outlined"
-                            fullWidth
-                            size='small'
+                            placeholder="Введите пароль"
                             value={data.pasword} />
                     </div>
                     <div className={classes.button}>
-                        <button>ВОЙТИ</button>
+                        <MyButton>войти</MyButton>
                     </div>
                     </div>
                 </form>

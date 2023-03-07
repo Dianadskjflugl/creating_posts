@@ -1,17 +1,19 @@
-import React from 'react';
-import Select from '@material-ui/core/Select'
-import { FormControl, InputLabel } from '@material-ui/core';
+import classes from './select.module.css'
 
-const MySelect = ({ options, defaultValue, value, onChange }) => {
+const MySelect = ({options, defaultValue, value, onChange}) => {
+    return (
+        <select
+            className={classes.select}
+            value={value}
+            onChange={event => onChange(event.target.value)}>
+            <option disabled value="">{defaultValue}</option>
+            {options.map(option =>
+                <option key={option.value} value={option.value}>
+                    {option.name}
+                </option>
+            )}
+        </select>
+    );
+};
 
-  return (
-    <FormControl variant="outlined" size="small">
-      <InputLabel htmlFor="filled-age-native-simple">Сортировка</InputLabel>
-      <Select native value={value} onChange={event => { onChange(event.target.value) }}>
-        <option value="">{defaultValue}</option>
-        {options.map(p => <option key={p.value} value={p.value}>{p.name}</option>)}
-      </Select>
-    </FormControl>
-  );
-}
 export default MySelect;

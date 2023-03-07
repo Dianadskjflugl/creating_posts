@@ -1,7 +1,7 @@
-.textarea {
+.input {
     padding: 8px 15px;
     width:100%;
     border: 1px solid #1049A9;
     border-radius: 3px;
-    min-height: 60px;
 }
+

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import classes from './menu.module.css';
 import { AuthContext } from '../../context/index';
 import { useNavigate } from 'react-router-dom';
-import { AppBar, Button, Typography } from '@material-ui/core';
+import MyButtonNone from '../../UI/buttonNone/buttonNone';
 
 const Menu = () => {
 
@@ -16,18 +16,18 @@ const Menu = () => {
 	}
 
 	return (
-		<AppBar position="static">
-			<div className={classes.header}>
+		<header className={classes.header}>
+			<div className={classes.block}>
 				<div className={classes.app}>
-					<Typography color="inherit">APPLICATION</Typography>
+					APPLICATION
 				</div>
 				<div className={classes.exit}>
 					{isAuth &&
-						<Button onClick={logout} color="inherit">выйти</Button>
+						<button className={classes.button} onClick={logout}>выйти</button>
 					}
 				</div>
 			</div>
-		</AppBar>);
+		</header>);
 }
 
 export default Menu;

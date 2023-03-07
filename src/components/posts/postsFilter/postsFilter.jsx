@@ -1,5 +1,5 @@
-import { TextField } from '@material-ui/core';
 import React from 'react';
+import MyInput from '../../../UI/input/input';
 import MySelect from '../../../UI/select/select';
 import classes from './postsFilter.module.css'
 
@@ -7,12 +7,13 @@ const PostFilter = ({ filter, setFilter }) => {
     return (
         <div className={classes.block}>
             <div className={classes.element}>
-                <TextField
-                    variant="outlined"
-                    size="small"
-                    label="Поиск..."
+                <div className={classes.input}>
+                <MyInput
+                    type="text"
+                    placeholder="Поиск..."
                     value={filter.query}
                     onChange={e => setFilter({ ...filter, query: e.target.value })} />
+                </div>
             </div>
             <div className={classes.element}>
                 <MySelect

@@ -1,21 +1,19 @@
-.button {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  margin-right: 30px;
-  margin-top: 10px;
+.header {
+  background-color: #4479D4;
+  color: white;
 }
 
-.header {
+.block {
   display: grid;
   grid-template-areas: "h n";
-  grid-template-columns: 4fr 8fr;
-  margin: 10px;  
+  grid-template-columns: 2fr 10fr;    
+  margin-top: 18px;
 }
 
 .app {
-  display: inline-block;
   grid-area: h;
+  display: flex;
+  justify-content: center;
 }
 
 .exit {
@@ -24,10 +22,27 @@
   justify-content: end;
 }
 
+.button {
+  font-size: 15px;
+  border: none;
+  background: none;
+  color: white;
+}
+
+.button:hover {
+  color: grey;
+}
+
+.button:active {
+  color: white;
+}
+
 @media (max-width: 768px) {
-  .header {
-    grid-template-columns: 6fr 6fr;
-    margin: 5px;
+  .block {
+    grid-template-columns: 3fr 9fr;
+  }
+  .block {
+    margin-top: 8px;
   }
   
 }
